@@ -56,7 +56,7 @@
         <div class="inc button">+</div>
     </div>
 
-    <button class="btnRelatorio">Gerar relatório</button>
+    <button class="btnRelatorio" onclick="printPage()">Gerar PDF</button>
 
     <script>
 
@@ -106,6 +106,15 @@
         month = date.getMonth();
         day = date.getDate();
         document.getElementById("current_date").innerHTML = day + "/" + month + "/" + year;
+
+        function printPage(){
+            window.print()
+        }
+
+        window.onbeforeunload = confirmExit;
+        function confirmExit(){
+            return "Se você fechar o navegador, seus dados serão perdidos. Deseja Realmente sair?";
+        }
 
     </script>
 </body>
