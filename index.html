@@ -1,148 +1,96 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,900&display=swap" rel="stylesheet">
-    <title>Contagem comercial</title>
-
-    <style>
-
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 300;
-        }
-        body{
-            min-height: 100vh;
-            color: white;
-            background-color: #151c48;
-            display: grid;
-            place-items: center;
-        }
-
-        .contadores{
-            background-color: rgba(255, 255, 255, .25);
-            padding: 20px;
-            border-radius: 5px;
-        }
-
-        .content {
-            display: flex;
-            align-items: center;
-            flex-direction: row;
-            max-width: 80vw;
-            justify-content: space-between;
-        }
-
-        .title{
-            display: flex;
-            align-items: center;
-            flex-direction: row;
-            justify-content: start;
-        }
-
-        /* .button{
-            display: flex;
-            align-items: center;
-            flex-direction: row;
-            justify-content: end;
-        } */
-
-        .buttonContador{
-            font-size: 20px;
-            padding: 0px 15px;
-            align-items: center;
-            flex-direction: row;
-            justify-content: end;
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <title>UnicusPet Comercial</title>
 </head>
 <body>
-    <div class="contadores">
-        <div class="container">
-            <img src="./logoBranca.svg" alt="logo" />
-            <h1>Contador comercial UnicusPet</h1>
-            <br />
-            <div class="content">
-                <div class="title">
-                    <h2>Ligação &nbsp</h2>
-                    <h2 id="contagemReal">(0) &nbsp</h2>
-                </div>
-                <div class="button">
-                    <button onclick="aumentar()" class="buttonContador">+1</button>
-                    <button onclick="diminuir()" class="buttonContador">-1</button>
-                </div>
-            </div>
-            <br />
-            <div class="content">
-                <div class="title">
-                    <h2>Conexão &nbsp</h2>
-                    <h2 id="contagemReal">(0) &nbsp</h2>
-                </div>
-                <div class="button">
-                    <button onclick="aumentar()" class="buttonContador">+1</button>
-                    <button onclick="diminuir()" class="buttonContador">-1</button>
-                </div>
-            </div>
-            <br />
-            <div class="content">
-                <div class="title">
-                    <h2>Proposta &nbsp</h2>
-                    <h2 id="contagemReal">(0) &nbsp</h2>
-                </div>
-                <div class="button">
-                    <button onclick="aumentar()" class="buttonContador">+1</button>
-                    <button onclick="diminuir()" class="buttonContador">-1</button>
-                </div>
-            </div>
-            <br />
-            <div class="content">
-                <div class="title">
-                    <h2>Apresentação &nbsp</h2>
-                    <h2 id="contagemReal">(0) &nbsp</h2>
-                </div>
-                <div class="button">
-                    <button onclick="aumentar()" class="buttonContador">+1</button>
-                    <button onclick="diminuir()" class="buttonContador">-1</button>
-                </div>
-            </div>
-            <br />
-            <div class="content">
-                <div class="title">
-                    <h2>Nutrição &nbsp</h2>
-                    <h2 id="contagemReal">(0) &nbsp</h2>
-                </div>
-                <div class="button">
-                    <button onclick="aumentar()" class="buttonContador">+1</button>
-                    <button onclick="diminuir()" class="buttonContador">-1</button>
-                </div>
-            </div>
-            <br />
-            <div class="content">
-                <div class="title">
-                    <h2>Fora &nbsp</h2>
-                    <h2 id="contagemReal">(0) &nbsp</h2>
-                </div>
-                <div class="button">
-                    <button id="botao" class="buttonContador">+1</button>
-                    <button onclick="diminuir()" class="buttonContador">-1</button>
-                </div>
-            </div>
-            <br />
-        </div>
+    <h1>Contagem comercial</h1>
+    <div class="box">
+        <label for=""name>Ligações</label>
+        <div class="dec button">-</div>
+        <input type="text" name="qty" id="1" value="0" class="input-field">
+        <div class="inc button">+</div>
+    </div>
+    <div class="box">
+        <label for=""name>Conexão</label>
+        <div class="dec button">-</div>
+        <input type="text" name="qty" id="2" value="0" class="input-field">
+        <div class="inc button">+</div>
+    </div>
+    <div class="box">
+        <label for=""name>Proposta</label>
+        <div class="dec button">-</div>
+        <input type="text" name="qty" id="3" value="0" class="input-field">
+        <div class="inc button">+</div>
+    </div>
+    <div class="box">
+        <label for=""name>Apresentação</label>
+        <div class="dec button">-</div>
+        <input type="text" name="qty" id="4" value="0" class="input-field">
+        <div class="inc button">+</div>
+    </div>
+    <div class="box">
+        <label for=""name>Nutrição</label>
+        <div class="dec button">-</div>
+        <input type="text" name="qty" id="5" value="0" class="input-field">
+        <div class="inc button">+</div>
+    </div>
+    <div class="box">
+        <label for=""name>Fora</label>
+        <div class="dec button">-</div>
+        <input type="text" name="qty" id="6" value="0" class="input-field">
+        <div class="inc button">+</div>
     </div>
 
+    <button class="btnRelatorio">Gerar relatório</button>
+
     <script>
-         
-       
-         
+
+        var incrementButton = document.getElementsByClassName('inc');
+        var decrementButton = document.getElementsByClassName('dec');
+        
+        // ADICIONAR
+        for(var i = 0; i < incrementButton.length; i++){
+            var button = incrementButton[i];
+            button.addEventListener('click', function(event){
+                var buttonClicked = event.target;
+                // console.log(buttonClicked)
+                var input = buttonClicked.parentElement.children[2];
+                // console.log(input);
+                var inputValue = input.value;
+                // console.log(inputValue);
+                var newValue = parseInt(inputValue) + 1;
+                // console.log(newValue);
+                input.value = newValue;  
+            })
+        }
+
+        // SUBTRAIR
+        for(var i = 0; i < decrementButton.length; i++){
+            var button = decrementButton[i];
+            button.addEventListener('click', function(event){
+                var buttonClicked = event.target;
+                // console.log(buttonClicked)
+                var input = buttonClicked.parentElement.children[2];
+                // console.log(input);
+                var inputValue = input.value;
+                // console.log(inputValue);
+                var newValue = parseInt(inputValue) - 1;
+                // console.log(newValue);
+                if (newValue >= 0){
+                    input.value = newValue;
+                }
+                else{
+                    input.value = 0;
+                    alert('Não precisa negativar a contagem. Bora bora, pra ciminha deles!')
+                }
+            })
+        }
+
     </script>
 </body>
 </html>
