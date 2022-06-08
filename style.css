@@ -23,6 +23,19 @@ body{
     background-color: #ececec;
 }
 
+body select{
+    font-size: 18px;
+    width: 100%;
+}
+
+.user{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .box{
     background-color: #fff;
     width: 320px;

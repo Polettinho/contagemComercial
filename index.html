@@ -9,6 +9,16 @@
 </head>
 <body>
     <h1>Contagem comercial</h1>
+    <p>Data:</p>
+    <div id="current_date"></div>
+    <div class="user">
+        <p>Selecione seu nome:</p>
+        <select name="select">
+            <option value="valor1">Massaki</option>
+            <option value="valor2">Leme</option>
+            <option value="valor3">Maria</option>
+        </select>
+    </div>
     <div class="box">
         <label for=""name>Ligações</label>
         <div class="dec button">-</div>
@@ -90,6 +100,12 @@
                 }
             })
         }
+
+        date = new Date();
+        year = date.getFullYear();
+        month = date.getMonth();
+        day = date.getDate();
+        document.getElementById("current_date").innerHTML = day + "/" + month + "/" + year;
 
     </script>
 </body>
